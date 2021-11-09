@@ -10,7 +10,7 @@ The library also supports the work with cubic bezier
 <hr>
 
 ```typescript
-import Index from "/your_path/timer"
+import Timer from "violence-ai/timer"
 ```
 
 # Usage
@@ -18,7 +18,7 @@ import Index from "/your_path/timer"
 
 ```typescript
 // creating with options
-let timer = new Index({
+let timer = new Timer({
     duration: 10000,
     cubicBezier: 'ease'
 })
@@ -57,7 +57,7 @@ let options = {
     cubicBezier: 'ease', // (Optional)
 }
 
-let timer = new Index(options)
+let timer = new Timer(options)
 ```
 
 # Events
