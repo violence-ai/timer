@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Example</title>
     <script src="../dist/timer.js"></script>
 </head>
@@ -25,10 +22,15 @@
     }
 
 </style>
+
 CSS:<br>
-<div class="line" style="transition: 1s cubic-bezier(.42,0,.58,1);"></div>
+
+<div class="line" style="transition: 1s ease-in-out;"></div>
+
 <br><br>
+
 JavaScript:<br>
+
 <div class="line"></div>
 
 <script>
@@ -39,7 +41,7 @@ JavaScript:<br>
     let timer = new Timer({
         duration,
         refreshRateMs: fps,
-        cubicBezier: [.42,0,.58,1]
+        cubicBezier: 'ease-in-out'
     })
     let el1 = document.getElementsByClassName('line')[1]
     timer.onTime( (progressData) => {
@@ -53,6 +55,7 @@ JavaScript:<br>
         timer.start()
 
         document.getElementsByClassName('line')[0].style.width = '100%'
+
     }, 500)
 
 </script>
