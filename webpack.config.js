@@ -9,7 +9,7 @@ module.exports = ({ development }) => ({
         path: path.resolve(__dirname, 'dist'),
         library: {
             name : "Timer",
-            type : 'var',
+            type : 'umd',
             export : 'default'
         },
         umdNamedDefine: true,
