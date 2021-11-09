@@ -1,4 +1,4 @@
-# Index
+# Timer
 
 This library will help you create a convenient timer. <br>
 Just create a timer and write your code in the events you need. <br>
