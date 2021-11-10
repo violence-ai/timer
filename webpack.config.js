@@ -5,8 +5,8 @@ module.exports = ({ development }) => ({
     devtool: development ? 'inline-source-map' : false,
     mode: development ? 'development' : 'production',
     output: {
-        filename: 'timer.js',
         path: path.resolve(__dirname, 'dist'),
+        filename: 'timer.js',
         library: {
             name : "Timer",
             type : 'umd',
