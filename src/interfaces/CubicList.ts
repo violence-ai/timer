@@ -1,3 +1,3 @@
-interface CubicList {
-    [key: string] : number[]
+export default interface CubicList {
+    [key: string]: number[]
 }

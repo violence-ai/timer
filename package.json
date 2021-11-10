@@ -1,11 +1,11 @@
 {
-  "name": "curve-bezier-timer",
+  "name": "curve-bezier-timer-test",
   "version": "1.0.0",
   "description": "Timer - this library will help you create a convenient timer.",
   "author": "Anri Ataian",
   "license": "MIT",
   "main": "dist/timer.js",
-  "typings": "dist/timer.d.js",
+  "types": "dist/timer.d.js",
   "module": "dist/timer.js",
   "prepublish": "npm run build",
   "scripts": {

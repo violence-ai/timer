@@ -1,3 +1,8 @@
+import CubicList from "./interfaces/CubicList";
+import OnTimeFunc from "./interfaces/OnTimeFunc";
+import Options from "./interfaces/Options";
+import Bezier from "./interfaces/Bezier";
+
 export default class Timer {
 
     private readonly cubicFunctions: CubicList = {

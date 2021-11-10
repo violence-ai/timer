@@ -1,3 +1,3 @@
-interface Bezier {
-    [key: string] : number
+export default interface Bezier {
+    [key: string]: number
 }
