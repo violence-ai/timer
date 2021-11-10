@@ -1,11 +1,4 @@
-export declare type ProgressData = {
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-    ms: number;
-    progress: number;
-};
+import { ProgressData } from "../types/ProgressData";
 export default interface OnTimeFunc {
     (progressData: ProgressData): void;
 }

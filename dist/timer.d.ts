@@ -1,5 +1,5 @@
 import OnTimeFunc from "./interfaces/OnTimeFunc";
-import Options from "./interfaces/Options";
+import { Options } from "./types/Options";
 export default class Timer {
     private readonly cubicFunctions;
     private readonly refreshRateMs;

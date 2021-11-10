@@ -1,7 +1,7 @@
-import CubicList from "./interfaces/CubicList";
-import OnTimeFunc from "./interfaces/OnTimeFunc";
-import Options from "./interfaces/Options";
-import Bezier from "./interfaces/Bezier";
+import {CubicList} from "./types/CubicList"
+import OnTimeFunc from "./interfaces/OnTimeFunc"
+import {Options} from "./types/Options"
+import {Bezier} from "./types/Bezier"
 
 export default class Timer {
 
@@ -85,7 +85,7 @@ export default class Timer {
                     minutes: this.minutes,
                     seconds: this.seconds,
                     ms: this.ms,
-                    progress: timingFunction(t) * 100 // 0-100
+                    progressValue: timingFunction(t) * 100 // 0-100
                 })
             }
 
