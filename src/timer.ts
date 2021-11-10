@@ -138,10 +138,12 @@ export default class Timer {
             return (1-t)**3*p0 + 3*t*(1-t)**2*p1 + 3*t**2*(1-t)*p2 + t**3*p3
         }
 
-        let bezier : Bezier = {}
+        let bezier: Bezier = {}
 
-        for ( let t=0; t<=1; t+=0.001 )
+        for ( let i=1; i<=1000; i++ )
         {
+            let t = i * 0.001
+
             let x = curve(p0.x, p1.x, p2.x, p3.x, t) // 0-1 time
             let y = curve(p0.y, p1.y, p2.y, p3.y, t) // 0-1 animate
 
@@ -150,7 +152,23 @@ export default class Timer {
 
         return function (t: number) {
 
-            return bezier[t.toFixed(3)]
+            let value = bezier[t.toFixed(3)]
+
+            if ( value === undefined )
+            {
+                let filter = Object.keys(bezier).reverse().filter(x => {
+                    return parseFloat(x) < t
+                })
+
+                if ( filter.length > 0 )
+                {
+                    return bezier[filter[0]]
+                }
+
+                return 0
+            }
+
+            return value
         }
     }
 }
