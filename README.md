@@ -10,7 +10,7 @@ The library also supports the work with cubic bezier
 <hr>
 
 ```typescript
-import Timer from "violence-ai/timer"
+import Timer from "curve-bezier-timer"
 ```
 
 # Usage
