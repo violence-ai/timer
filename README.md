@@ -1,8 +1,9 @@
-# Timer
+# Curve Bezier Timer
 
-This library will help you create a convenient timer. <br>
-Just create a timer and write your code in the events you need. <br>
-The library also supports the work with cubic bezier
+### Control animation bezier curve in Javascript
+
+This package will allow you to easily control your animation through a javascript bezier curve.<br>
+You can also use this package just as a timer
 
 <hr>
 
