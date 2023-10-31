@@ -1,4 +1,4 @@
-export declare type ProgressData = {
+export type ProgressData = {
     days: number;
     hours: number;
     minutes: number;

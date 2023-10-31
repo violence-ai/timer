@@ -19,7 +19,7 @@ import Timer from "curve-bezier-timer"
 
 ```typescript
 // creating with options
-let timer = new Timer({
+const timer = new Timer({
     duration: 10000,
     cubicBezier: 'ease'
 })
@@ -42,7 +42,7 @@ timer.onEnd(() => {
 <hr>
 
 ```typescript
-let options = {
+const options = {
     duration: 10000, // 10 sec
     // Refresh rate
     // Default: 50
@@ -58,7 +58,7 @@ let options = {
     cubicBezier: 'ease', // (Optional)
 }
 
-let timer = new Timer(options)
+const timer = new Timer(options)
 ```
 
 # Events

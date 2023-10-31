@@ -1,3 +1,3 @@
-export declare type CubicList = {
+export type CubicList = {
     [key: string]: number[];
 };

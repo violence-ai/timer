@@ -1,3 +1,3 @@
-export declare type Bezier = {
+export type Bezier = {
     [key: string]: number;
 };

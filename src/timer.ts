@@ -50,7 +50,7 @@ export default class Timer {
 
     public start() {
 
-        let timingFunction = Timer.cubicBezier(this.cubicBezierPoints)
+        const timingFunction = Timer.cubicBezier(this.cubicBezierPoints)
 
         this.timerInterval = setInterval(() => {
 
@@ -77,7 +77,7 @@ export default class Timer {
             // if listen onTime event
             if ( this.onTimeFunc )
             {
-                let t = ((this.duration - this.remained) / (this.duration/100) ) / 100 // 0-1
+                const t = ((this.duration - this.remained) / (this.duration/100) ) / 100 // 0-1
 
                 this.onTimeFunc({
                     days: this.days,
@@ -129,34 +129,34 @@ export default class Timer {
 
     private static cubicBezier(points: number[]) {
 
-        let p0 = { x: 0, y: 0 },
+        const p0 = { x: 0, y: 0 },
             p1 = { x: points[0], y: points[1] },
             p2 = { x: points[2], y: points[3] },
             p3 = { x: 1, y: 1 }
 
-        let curve = function (p0: number, p1: number, p2: number, p3: number, t: number) {
+        const curve = function (p0: number, p1: number, p2: number, p3: number, t: number) {
             return (1-t)**3*p0 + 3*t*(1-t)**2*p1 + 3*t**2*(1-t)*p2 + t**3*p3
         }
 
-        let bezier: Bezier = {}
+        const bezier: Bezier = {}
 
         for ( let i=1; i<=1000; i++ )
         {
-            let t = i * 0.001
+            const t = i * 0.001
 
-            let x = curve(p0.x, p1.x, p2.x, p3.x, t) // 0-1 time
-            let y = curve(p0.y, p1.y, p2.y, p3.y, t) // 0-1 animate
+            const x = curve(p0.x, p1.x, p2.x, p3.x, t) // 0-1 time
+            const y = curve(p0.y, p1.y, p2.y, p3.y, t) // 0-1 animate
 
             bezier[x.toFixed(3)] = y
         }
 
         return function (t: number) {
 
-            let value = bezier[t.toFixed(3)]
+            const value = bezier[t.toFixed(3)]
 
             if ( value === undefined )
             {
-                let filter = Object.keys(bezier).reverse().filter(x => {
+                const filter = Object.keys(bezier).reverse().filter(x => {
                     return parseFloat(x) < t
                 })
 

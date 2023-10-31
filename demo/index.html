@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <script src="../dist/timer.js"></script>
+</head>
+<body>
+
+<style>
+    
+    body {
+        margin: 0;
+        background: #000;
+        color: #fff;
+        font-size: 100px;
+        font-family: sans-serif;
+    }
+
+    .name {
+        padding-left: 34px;
+        padding-bottom: 10px;
+    }
+
+    .line {
+        height: 100px;
+        background: #a34141;
+        width: 0;
+    }
+
+</style>
+
+<!--CSS:<br>-->
+
+<!--<div class="line" style="transition: 1s ease-in-out;"></div>-->
+
+<div class="name">ease</div>
+<div class="line"></div>
+<div class="name">ease-in:</div>
+<div class="line"></div>
+<div class="name">ease-out:</div>
+<div class="line"></div>
+<div class="name">ease-in-out:</div>
+<div class="line"></div>
+
+<script>
+
+    const duration = 1000
+    const fps = 5
+
+    const timer1 = new Timer({duration, refreshRateMs: fps, cubicBezier: 'ease'})
+    const timer2 = new Timer({duration, refreshRateMs: fps, cubicBezier: 'ease-in'})
+    const timer3 = new Timer({duration, refreshRateMs: fps, cubicBezier: 'ease-out'})
+    const timer4= new Timer({duration, refreshRateMs: fps, cubicBezier: 'ease-in-out'})
+
+    const el1 = document.getElementsByClassName('line')[0]
+    const el2 = document.getElementsByClassName('line')[1]
+    const el3 = document.getElementsByClassName('line')[2]
+    const el4 = document.getElementsByClassName('line')[3]
+
+    timer1.onTime( (progressData) => el1.style.width = progressData.progressValue + '%')
+    timer2.onTime( (progressData) => el2.style.width = progressData.progressValue + '%')
+    timer3.onTime( (progressData) => el3.style.width = progressData.progressValue + '%')
+    timer4.onTime( (progressData) => el4.style.width = progressData.progressValue + '%')
+
+    setTimeout(()=> {
+        timer1.start()
+        timer2.start()
+        timer3.start()
+        timer4.start()
+        // document.getElementsByClassName('line')[0].style.width = '100%'
+    }, 500)
+
+</script>
+
+</body>
+</html>
