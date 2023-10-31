@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://violence.dev/logo-big" target="blank">
+      <img src="https://violence.dev/img/logo-big.svg" width="180" alt="Violence Logo" />
+  </a>
+</p>
+
 # Curve Bezier Timer
 
 ### Control animation bezier curve in Javascript
