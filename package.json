@@ -1,7 +1,7 @@
 {
     "name": "curve-bezier-timer",
     "email": "anri1992@yandex.ru",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Timer - this library will help you create a convenient timer.",
     "author": "Anri Ataian",
     "license": "MIT",
