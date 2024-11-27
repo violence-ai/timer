@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://violence.dev" target="blank">
-      <img src="https://violence.dev/img/logo-git.svg" width="200" alt="Violence Logo" />
+  <a href="https://violence.pro" target="blank">
+      <img src="https://violence.pro/img/logo-git.svg" width="200" alt="Violence Logo" />
   </a>
 </p>
 
